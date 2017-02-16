@@ -1,0 +1,27 @@
+{
+  "name": "Eleos",
+  "version": "0.0.1",
+  "description": "A minimal Equihash wallet",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/z-classic/eleos",
+  "keywords": [
+    "zclassic",
+    "equihash",
+    "zcash",
+    "wallet"
+  ],
+  "author": "@dresdan",
+  "license": "CPAL",
+  "dependencies": {
+    "tableify": "*",
+    "request": "*"
+  },
+  "devDependencies": {
+    "electron": "^1.4.1",
+    "tableify": "*",
+    "request": "*"
+  }
+}
