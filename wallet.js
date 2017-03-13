@@ -12,7 +12,10 @@ if (os.platform() === 'win32') {
     array = fs.readFileSync(process.env.APPDATA + '/Zclassic/' + 'zclassic.conf', 'UTF-8').toString().split('\r');
 } else if (os.platform() === 'darwin') {
     array = fs.readFileSync(process.env.HOME + '/Library/Application Support/Zclassic/' + 'zclassic.conf', 'UTF-8').toString().split('\n');
+} else {
+  array = fs.readFileSync(process.env.HOME + '/.zclassic/' + 'zclassic.conf', 'UTF-8').toString().split('\n');
 }
+
 for (let i = 0; i < array.length; i++) {
     let tmpString = array[i].replace(' ', '').toLowerCase().trim();
     if (tmpString.search('rpcuser') > -1) {
